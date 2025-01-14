@@ -7,6 +7,24 @@ import {addToCart, calculateCartQuantity} from '../data/cart.js';
 async function loadPage() {
   await loadProductsFetch();
 
+  if (orders.length === 0) {
+    // If no orders, display a message and a button
+    document.querySelector('.js-orders-grid').innerHTML = `
+      <div class="no-orders-message">
+        <div>
+          <img src="images/sad-pup-no-orders.jpg" alt="No orders" class="no-orders-image">
+        </div>
+        <br>
+        <p>Looks like you haven't placed any orders yet.</p>
+        <button class="start-shopping-button" onclick="window.location.href='/'">
+          Start Shopping
+        </button>
+      </div>
+    `;
+    return;
+  }
+  
+  
   let ordersHTML = '';
 
   orders.forEach((order) => {
@@ -100,6 +118,8 @@ async function loadPage() {
       }, 1000);
     });
   });
+
+
 }
 
 loadPage();

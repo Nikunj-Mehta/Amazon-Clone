@@ -225,7 +225,7 @@ export function renderOrderSummary() {
     if (cart.length === 0) {
       if (emptyCartMessageContainer) {
         emptyCartMessageContainer.innerHTML = `
-          <p>Your cart is empty.</p>
+          <p>It looks like your cart is empty.</p>
           <a href="/" class="view-products-btn">View Products</a>
         `;
       } else {

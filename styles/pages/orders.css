@@ -218,3 +218,39 @@
     padding: 12px;
   }
 }
+
+.no-orders-message {
+  text-align: center;
+  padding: 20px;
+}
+
+.no-orders-message p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.start-shopping-button {
+  display: inline-block;
+  background-color: rgb(255, 216, 20);
+  border: none;
+  color: rgb(33, 33, 33);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  margin-bottom: 10px;
+}
+
+.start-shopping-button:hover {
+  background-color: rgb(247, 202, 0);
+}
+
+.no-orders-image {
+  height: 250px;
+  width: 300px;
+}
+
+
+
