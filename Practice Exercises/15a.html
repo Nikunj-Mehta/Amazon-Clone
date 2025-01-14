@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 15 Exercises</title>
+  </head>
+  <body>
+    <script type="module">
+      import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+      import isWeekend from './helper.js'; // Export default
+      import isSatSun from './helper.js'; // We can change name while importing
+      
+      // 15a
+      const today = dayjs();
+      console.log(today.format('MMMM D'));
+      const deliveryDate = today.add(5, 'days');
+      // console.log(deliveryDate);
+      console.log(deliveryDate.format('MMMM D'));
+
+      // 15b
+      const laterDeliveryDate = today.add(1, 'months');
+      console.log(laterDeliveryDate.format('MMMM D'));
+
+       // 15c
+      const priorDeliveryDate = today.subtract(1, 'Month');
+      console.log(priorDeliveryDate.format('MMMM D'));
+
+      // 15d
+      console.log(today.format('dddd')); 
+
+      // 15e and 15f
+      isWeekend(today);
+      isWeekend(deliveryDate);
+      isWeekend(laterDeliveryDate);
+      isWeekend(priorDeliveryDate);
+
+      console.log(''); // Empty line
+      
+      //15g
+      isSatSun(today);
+      isSatSun(deliveryDate);
+      isSatSun(laterDeliveryDate);
+      isSatSun(priorDeliveryDate);
+
+    </script>
+  </body>
+</html>
