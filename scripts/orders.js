@@ -16,7 +16,7 @@ async function loadPage() {
         </div>
         <br>
         <p>Looks like you haven't placed any orders yet.</p>
-        <button class="start-shopping-button" onclick="window.location.href='/'">
+        <button class="start-shopping-button" onclick="window.location.href='index.html'">
           Start Shopping
         </button>
       </div>
