@@ -226,13 +226,13 @@ export function renderOrderSummary() {
       if (emptyCartMessageContainer) {
         emptyCartMessageContainer.innerHTML = `
           <p>Your cart is empty.</p>
-          <a href="amazon.html" class="view-products-btn">View Products</a>
+          <a href="/" class="view-products-btn">View Products</a>
         `;
       } else {
         cartContainer.innerHTML = `
           <div class="js-empty-cart">
             <p>Your cart is empty.</p>
-            <a href="amazon.html" class="view-products-btn">View Products</a>
+            <a href="/" class="view-products-btn">View Products</a>
           </div>
         `;
       }
