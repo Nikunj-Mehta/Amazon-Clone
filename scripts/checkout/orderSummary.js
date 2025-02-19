@@ -20,13 +20,13 @@ export function renderOrderSummary() {
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
 
-    const matchingProduct = getProduct(productId); // in products.js
+    const matchingProduct = getProduct(productId); // in products.js It's work is to find matching product from products array using productId.
 
     //  console.log(matchingProduct);
 
     const deliveryOptionId = cartItem.deliveryOptionId;
 
-    const deliveryOption = getDeliveryOption(deliveryOptionId); // in deliveryOptions.js
+    const deliveryOption = getDeliveryOption(deliveryOptionId); // in deliveryOptions.js find complete delivery option using deliveryOptionId
 
     const dateString = calculateDeliveryDate(deliveryOption);
 
@@ -54,7 +54,7 @@ export function renderOrderSummary() {
             <span class="update-quantity-link link-primary js-update-link" data-product-id="${matchingProduct.id}">
               Update
             </span>
-            <input class="quantity-input js-quantity-input-${matchingProduct.id}"">
+            <input class="quantity-input js-quantity-input-${matchingProduct.id}">
             <span class="save-quantity-link link-primary js-save-link"data-product-id="${matchingProduct.id}">
               Save
             </span>
@@ -140,7 +140,8 @@ export function renderOrderSummary() {
     });
 
     // console.log(cartSummaryHTML);
-    // Checkout at the top of checkout page.
+
+    // Checkout items number at the top of checkout page.
     function updateCartQuantity() {
       const cartQuantity = calculateCartQuantity(); // Calculate the total cart quantity.
     
@@ -194,14 +195,14 @@ export function renderOrderSummary() {
         const container = document.querySelector(
           `.js-cart-item-container-${productId}`
         );
-        container.classList.remove('is-editing-quantity');
+        container.classList.remove('is-editing-quantity'); // remove save link to remove block and save and show update there. As our updation is finished.
 
         const quantityLabel = document.querySelector(
           `.js-quantity-label-${productId}`
         );
         quantityLabel.innerHTML = newQuantity;
 
-        updateCartQuantity();
+        updateCartQuantity(); // updates cart quantity at the top of the checkout page
 
         renderPaymentSummary();
       });
@@ -219,7 +220,6 @@ export function renderOrderSummary() {
   });
 
   // Helper function to check if the cart is empty
-    const cartContainer = document.querySelector('.js-order-summary');
     const emptyCartMessageContainer = document.querySelector('.js-empty-cart');
 
     if (cart.length === 0) {
@@ -228,17 +228,6 @@ export function renderOrderSummary() {
           <p>It looks like your cart is empty.</p>
           <a href="index.html" class="view-products-btn">View Products</a>
         `;
-      } else {
-        cartContainer.innerHTML = `
-          <div class="js-empty-cart">
-            <p>Your cart is empty.</p>
-            <a href="index.html" class="view-products-btn">View Products</a>
-          </div>
-        `;
-      }
-    } else {
-      if (emptyCartMessageContainer) {
-        emptyCartMessageContainer.innerHTML = ''; // Clear the empty message
       }
     }
 }

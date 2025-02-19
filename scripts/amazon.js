@@ -15,6 +15,7 @@ function renderProductsGrid() {
 
   // If a search exists in the URL parameters,
   // filter the products that match the search.
+  // this will run only if we type anything in search else the filterdProducts will have all items of product
   if (search) {
     filteredProducts = products.filter((product) => {
       let matchingKeyword = false;
@@ -88,30 +89,13 @@ function renderProductsGrid() {
 
   document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
-  function updateCartQuantity(productId)
+  function updateCartQuantity() // Updates cart Quantity at top right of website
   {
     const cartQuantity = calculateCartQuantity();
-
       document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-
-      const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
-      addedMessage.classList.add('added-to-cart-visible');
-
-      const previousTimeoutId = addedMessageTimeouts[productId];
-      if(previousTimeoutId) {
-        clearTimeout(previousTimeoutId);
-      }
-
-      const timeoutId = setTimeout(() => {
-        addedMessage.classList.remove('added-to-cart-visible');
-        }, 2000);
-
-        // Save the timeoutId for this product
-        // so we can stop it later if we need to.
-        addedMessageTimeouts[productId] = timeoutId;
   }
 
-  const addedMessageTimeouts = {};
+  updateCartQuantity();
 
   document.querySelectorAll('.js-add-to-cart').forEach((button) => {
       button.addEventListener('click', () => {
@@ -119,7 +103,7 @@ function renderProductsGrid() {
 
         addToCart(productId);
 
-        updateCartQuantity(productId);
+        updateCartQuantity();
       });
     });
 

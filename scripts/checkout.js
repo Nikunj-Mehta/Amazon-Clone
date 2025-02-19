@@ -23,7 +23,7 @@ async function loadPage() { // async keyword wraps the code into a promise
   renderOrderSummary(); 
   renderPaymentSummary();
 }
-loadPage();
+loadPage(); // call the function to re-render
 
 /*
 Promise.all([

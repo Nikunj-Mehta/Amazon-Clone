@@ -115,9 +115,9 @@ export let products = [];
 
 export function loadProductsFetch() {
   const promise = fetch('https://supersimplebackend.dev/products').then((response) => { // Instead of using callback to wait for the response fetch uses Promise to wait for the response.
-    return response.json() // Gives the JSON(data) attached to response  It is asynchronous ,it returns promise
+    return response.json() // Gives only the JSON(data) attached to response  It is asynchronous ,it returns promise
   }).then((productsData) => {
-    products = productsData.map((productDetails) => {  // map loops through an array 
+    products = productsData.map((productDetails) => {  // map loops through an array  of JSobjects and converts it to class objects.
   
       if(productDetails.type == 'clothing') {
         return new Clothing(productDetails);
@@ -152,7 +152,7 @@ export function loadProducts(fun) {
         return new Appliance(productDetails);
       }
     
-      return new Products(productDetails);  // it will take the first value save it in productDetails, run the function. (repeat)
+      return new Products(productDetails);  // it will check the productDetail will create the object according to that. (repeat)
     }); // we take a product transform it into objects(class) and then save it into new array;
 
     console.log('load products');

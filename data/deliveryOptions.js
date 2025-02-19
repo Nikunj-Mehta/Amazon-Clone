@@ -26,7 +26,7 @@ export function getDeliveryOption(deliveryOptionId) {
       deliveryOption = option;
     }
   });
-  return deliveryOption || deliveryOptions[0];
+  return deliveryOption || deliveryOptions[0]; // Retrives delivery option based on provided delivery option ID. If specified ID is not found it defaults to 1st deliveryOption.
 }
 
 export function calculateDeliveryDate(deliveryOption) {
