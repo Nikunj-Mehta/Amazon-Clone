@@ -66,7 +66,13 @@ async function loadPage() {
 
     order.products.forEach((productDetails) => {
       const product = getProduct(productDetails.productId);
-
+      
+      const deliveryDate = dayjs(productDetails.estimatedDeliveryTime); // to write Arrived by for the orders arrived earlies and arriving on for orders yet to arrive.
+      const today = dayjs();
+      const deliveryText = today.isAfter(deliveryDate, 'day')
+        ? `Delivered by: ${deliveryDate.format('MMMM D')}`
+        : `Arriving on: ${deliveryDate.format('MMMM D')}`;
+      
       productsListHTML += `
         <div class="product-image-container">
           <img src="${product.image}">
@@ -76,9 +82,7 @@ async function loadPage() {
             ${product.name}
           </div>
           <div class="product-delivery-date">
-            Arriving on: ${
-              dayjs(productDetails.estimatedDeliveryTime).format('MMMM D')
-            }
+            ${deliveryText}
           </div>
           <div class="product-quantity">
             Quantity: ${productDetails.quantity}
@@ -119,6 +123,12 @@ async function loadPage() {
     });
   });
 
+  function updateCartQuantity() // Updates cart Quantity at top right of website
+  {
+    const cartQuantity = calculateCartQuantity();
+      document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+  }
+  updateCartQuantity();
 
 }
 

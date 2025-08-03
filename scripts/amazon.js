@@ -110,7 +110,7 @@ function renderProductsGrid() {
     document.querySelector('.js-search-button')
     .addEventListener('click', () => {
       const search = document.querySelector('.js-search-bar').value;
-      window.location.href = `index.html?search=${search}`;
+      window.location.href = `index.html?search=${search}`; // redirect user to index.html with the search query added with the value user typed in input and that value is taken from searchf query and the products having that keywords will be added to filtered array.
     });
 
     // Extra feature: searching by pressing "Enter" on the keyboard.
