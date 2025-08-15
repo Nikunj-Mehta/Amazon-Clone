@@ -1,34 +1,58 @@
-# Amazon Clone
+# 🛒 Amazon Clone  
 
-A front-end clone of Amazon's homepage built using HTML, CSS, and JavaScript.
+A **front-end replica** of Amazon’s homepage, built using **HTML, CSS, and JavaScript**, to practice responsive web design and UI development.  
 
 ## 🔗 Live Demo  
-👉 [Click here to view the website](https://nikunj-mehta.github.io/Amazon-Clone/)
+🌐 **[View Project Here](https://nikunj-mehta.github.io/Amazon-Clone/)**  
 
-## 🚀 Features
-- Amazon-like navigation bar and product listings
-- Product grid and banners
-- Responsive design across screen sizes
-- Hover effects and interactivity using JavaScript
+## ✨ Features  
+- 🧭 **Amazon-like Navigation Bar** – Fully functional header with logo, search, and account/cart sections.  
+- 🛍️ **Product Listings & Banners** – Organized grid layout showcasing products and promotional banners.  
+- 📱 **Responsive Design** – Optimized for desktops, tablets, and mobile devices.  
+- 🎨 **Hover Effects & Animations** – Smooth transitions for interactive elements.  
+- ⚡ **JavaScript Interactivity** – Basic DOM manipulation for dynamic effects.  
 
-## 🛠️ Tech Stack
-- HTML
-- CSS
-- JavaScript
-- Font Awesome (for icons)
-- Google Fonts
+## 🛠 Tech Stack  
+- **HTML5** – Structure of the application  
+- **CSS3** – Styling & responsive design (Flexbox, Media Queries)  
+- **JavaScript (ES6)** – Interactivity & DOM manipulation  
+- **Font Awesome** – Icons  
+- **Google Fonts** – Typography  
 
-## 📁 Folder Structure
-- `index.html` – Main landing page
-- `/images` – Contains image assets
-- `style.css` – Styles for the layout and design
-- `script.js` – JavaScript logic for interactivity
+## 📂 Folder Structure
+```
+Amazon-Clone/
+│── index.html # Main HTML file
+│── style.css # Styling for layout & design
+│── script.js # JavaScript logic for interactivity
+│── /images # Image assets
+```
 
-## 📚 What I Learned
-- Creating responsive layouts using Flexbox
-- Real-world UI cloning
-- Basic DOM manipulation
-- GitHub Pages deployment
+## 📚 What I Learned  
+- Crafting **pixel-perfect layouts** inspired by real-world websites  
+- Implementing **responsive design principles** using Flexbox & media queries  
+- Adding **hover effects** and smooth UI transitions  
+- Deploying static websites using **GitHub Pages**  
 
-## 🧑‍💻 Author
-Built by [Nikunj Mehta](https://github.com/Nikunj-Mehta)
+## 🎯 Project Motivation  
+This project was built to strengthen my **front-end development skills** by replicating a well-known, real-world website interface. The focus was on **responsiveness, clean UI design, and structured code** following industry practices.  
+
+## 🚀 Future Improvements  
+- Add product detail pages with dynamic rendering  
+- Implement cart functionality with local storage  
+- Integrate backend for real-time data fetching  
+
+## 📸 Screenshots  
+
+**Home Page**
+![Home Page](screenshots/home.png)
+
+**Cart Details**
+![Cart Details](screenshots/cart.png)
+
+**Tracking Page**
+![Tracking Page](screenshots/tracking.png)
+
+## 🧑‍💻 Author  
+Developed by **[Nikunj Mehta](https://github.com/Nikunj-Mehta)** 🚀  
+
