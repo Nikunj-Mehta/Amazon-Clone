@@ -3,7 +3,7 @@
 A **front-end replica** of Amazon’s homepage, built using **HTML, CSS, and JavaScript**, to practice responsive web design and UI development.  
 
 ## 🔗 Live Demo  
-🌐 **[View Project Here](https://nikunj-mehta.github.io/Amazon-Clone/)**  
+🌐 **[View Project Here](https://nikunj-mehta.github.io/Ecommerce-Clone/)**  
 
 ## ✨ Features  
 - 🧭 **Amazon-like Navigation Bar** – Fully functional header with logo, search, and account/cart sections.  

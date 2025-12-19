@@ -28,6 +28,8 @@ export function renderPaymentSummary() {
     cartQuantity += cartItem.quantity;
   });
 
+  const isCartEmpty = cartQuantity === 0;
+
   const paymentSummaryHTML = `
     <div class="payment-summary-title">
       Order Summary
@@ -68,7 +70,9 @@ export function renderPaymentSummary() {
       </div>
     </div>
 
-    <button class="place-order-button button-primary js-place-order">
+    <button class="place-order-button button-primary js-place-order"
+      ${isCartEmpty ? 'disabled' : ''}
+      title="${isCartEmpty ? 'Add items to cart before placing order' : ''}">
       Place your order
     </button>
   `;

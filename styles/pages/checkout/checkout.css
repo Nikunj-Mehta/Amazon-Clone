@@ -260,3 +260,9 @@
 .view-products-btn {
   text-decoration: none; /* Removes the underline */
 }
+
+/* Disabled but still visually consistent */
+.place-order-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;                        /* subtle fade */
+}
