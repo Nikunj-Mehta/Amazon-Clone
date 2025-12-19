@@ -1,4 +1,4 @@
-# 🛒 Amazon Clone  
+# 🛒 Ecommerce Clone  
 
 A **front-end replica** of Amazon’s homepage, built using **HTML, CSS, and JavaScript**, to practice responsive web design and UI development.  
 
@@ -21,7 +21,7 @@ A **front-end replica** of Amazon’s homepage, built using **HTML, CSS, and Jav
 
 ## 📂 Folder Structure
 ```
-Amazon-Clone/
+Ecommerce-Clone/
 │── index.html # Main HTML file
 │── style.css # Styling for layout & design
 │── script.js # JavaScript logic for interactivity
